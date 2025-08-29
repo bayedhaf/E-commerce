@@ -3,7 +3,14 @@
 
 
 @custom-variant dark (&:is(.dark *));
-
+@theme {
+  --color-darkColor: #151515;
+  --color-lightColor: #52525b;
+  --color-lightOrange: #fca99b;
+  --color-lightBlue: #7688db;
+  --color-darkBlue: #6c7fd8;
+  --color-lightBg: #f8f8fb;
+};
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
@@ -124,5 +131,8 @@
 }
 /*font setup*/
 :root{
-  --font-raleway
+  --font-raleway: "Ralewaay", sans-serif;
+}
+body{
+  font-family: var(--font-raleway);
 }

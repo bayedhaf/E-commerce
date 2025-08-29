@@ -1,0 +1,14 @@
+{
+  "files.associations": {
+    "*.css": "postcss"
+  },
+  "css.validate": false,
+  "tailwindCSS.includeLanguages": {
+    "plaintext": "postcss",
+    "css": "postcss",
+    "scss": "postcss"
+  },
+  "editor.quickSuggestions": {
+    "strings": true
+  }
+}
