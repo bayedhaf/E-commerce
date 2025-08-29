@@ -5,8 +5,12 @@ import Container from './Container'
 import MobileMenu from './MobileMenu'
 import SearchBar from './SearchBar'
 import CartIcon from './CartIcon'
+import { currentUser } from '@clerk/nextjs/server'
+import { ClerkLoaded, SignedIn, SignInButton, UserButton } from '@clerk/nextjs'
 
-export default function Header() {
+export default async function Header() {
+  const user=await currentUser();
+ 
   return (
     <header className='bg-white border-b border-b-gray-400 py-5 '>
     <Container className='flex items-center justify-between gap-7 text-lightColor'>
@@ -21,6 +25,17 @@ export default function Header() {
       <div className="w-auto md:w-1/3 justify-end gap-5 flex items-center">
        <SearchBar/>
        <CartIcon/>
+      <ClerkLoaded>
+        <SignedIn>
+          <UserButton/>
+        </SignedIn>
+            {!user && (
+          <SignInButton mode="modal">
+              <button className="text-sm font-semibold hover:text-darkColor hoverEffect">Login</button>
+          </SignInButton>
+            )
+            }
+      </ClerkLoaded>
       </div>
     </Container>
     </header>
