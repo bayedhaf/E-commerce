@@ -1,7 +1,7 @@
 # 🛒 E-Commerce Website
 
 A modern, full-stack **E-Commerce Web Application** that allows users to browse products, add items to cart, and securely checkout.  
-Built with a **React (Next.js) frontend** and **PHP + MongoDB backend**, styled using **Tailwind CSS**, and secured with **JWT authentication**.
+Built with a **React (Next.js) frontend** and **Nextjs + MongoDB backend**, styled using **Tailwind CSS**, and secured with **CLerk authentication**.
 
 ---
 
