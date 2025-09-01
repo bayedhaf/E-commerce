@@ -1,4 +1,5 @@
 import {TagIcon} from '@sanity/icons'
+import { subtle } from 'crypto'
 import {defineField, defineType} from 'sanity'
 
 export const categoryType = defineType({
@@ -22,5 +23,20 @@ export const categoryType = defineType({
       name: 'description',
       type: 'text',
     }),
+      defineField({
+      name: 'image',
+      type: 'image',
+      title:"Category Image",
+      options:{
+        hotspot:true,
+      },
+    }),
   ],
+  preview:{
+    select:{
+      title:"title",
+      subtitle:"description",
+      media:"image",
+    },
+  }
 })
