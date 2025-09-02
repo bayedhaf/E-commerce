@@ -14,7 +14,11 @@ export default function HomeTabbar({selectedTab,onTabSelect}:Props) {
 
             {
                 productTypes.map((item)=>(
-                    <button key={item?.title} className={`border border-darkColor px-4 py-1.5 md:px-2 rounded-full hover:bg-darkColor hover:text-white hoverEffect`}>
+                    <button
+                    onClick={()=>onTabSelect(item?.title)}
+                     key={item?.title} className={`border border-darkColor 
+                     px-4 py-1.5 md:px-2 rounded-full hover:bg-darkColor hover:text-white hoverEffect
+                     ${selectedTab===item?.title && "bg-darkColor text-white"}`}>
                         {item?.title}
                     </button>
                 ))
