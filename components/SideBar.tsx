@@ -3,7 +3,7 @@ import Logo from './Logo';
 import {motion} from 'motion/react'
 import { X } from 'lucide-react';
 import Link from 'next/link';
-import headerData from '@/constants';
+import {headerData} from '@/constants';
 import { usePathname } from 'next/navigation';
 import SocialMedia from './SocialMedia';
 import { useOutsideClick } from '@/hooks/useOutsideClick';

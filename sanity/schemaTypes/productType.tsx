@@ -93,21 +93,23 @@ export const productType=defineType({
                     {title:"Short",value:"short"}
                     ,{title:"Others",value:"others"},
                 ],
-                preview:{
-                    select:{
-                        title:"name",
-                        media:"images",
-                        subtitle:"price",
-                    },
-                    prepare(selection){
-                        const {title,subtitle,media}=selection,
-                        const image=media && media[0]
-                        return {
-                            title:title,
-                            subtitle:'&&'
-                        }
-                    }
+            },
+        }),
+
+],
+      preview:{
+             select:{
+                title:"name",
+                media:"images",
+                subtitle:"price",
+            },
+            prepare(selection){
+                const {title,subtitle,media}=selection
+                const image=media && media[0]
+                return {
+                    title:title,
+                    subtitle:`$${subtitle}`,
+                    media:image,
                 }
             }
-        })
-],})
+                }})
