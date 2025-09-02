@@ -1,11 +1,14 @@
 import React from 'react'
 import Title from './Title'
+import { cn } from '@/lib/utils';
+interface HomeBannerProps {
+  className?: string;
+}
 
 
-
-export default function HomeBanner() {
+export default function HomeBanner({ className }: HomeBannerProps) {
   return (
-    <div className='flex flex-col items-center justify-center gap-5'>
+    <div className={cn('flex flex-col items-center justify-center gap-5',className)}>
         <Title className='text-3xl md:text-4xl uppercase font-bold text-center'>
             Best CLothing Collection
         </Title>
