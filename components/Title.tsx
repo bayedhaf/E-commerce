@@ -8,7 +8,7 @@ interface Props{
 
 export default function Title({children,className}: Props) {
   return (
-    <div className={cn('',className)}>
+    <div className={cn('text-darkColor ',className)}>
         {children}
     </div>
   )

@@ -5,6 +5,7 @@ import { productTypes } from '@/constants'
 import { client } from '@/sanity/lib/client'
 import ProductCard from './ProductCard'
 import { Product } from '@/sanity.types'
+import NoProductAvailable from './NoProductAvailable'
 
 export default function ProductGrid() {
   const [selectedTab, setSelectedTab] = useState(productTypes[0]?.title || "")
@@ -39,7 +40,7 @@ export default function ProductGrid() {
       ) : (
         <>
           {products.length ? (
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
               {products.map((product) => (
                 <div key={product._id}>
                   <ProductCard product={product} />
@@ -47,7 +48,7 @@ export default function ProductGrid() {
               ))}
             </div>
           ) : (
-            <p>No products</p>
+            <NoProductAvailable  selectedTab={selectedTab}/>
           )}
         </>
       )}
