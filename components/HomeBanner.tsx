@@ -8,7 +8,7 @@ interface HomeBannerProps {
 
 export default function HomeBanner({ className }: HomeBannerProps) {
   return (
-    <div className={cn('flex flex-col items-center justify-center gap-5',className)}>
+    <div className={cn('flex flex-col items-center justify-center gap-5 ',className)}>
         <Title className='text-3xl md:text-4xl uppercase font-bold text-center'>
             Best CLothing Collection
         </Title>
